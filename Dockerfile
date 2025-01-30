@@ -25,3 +25,4 @@ RUN yarn install --network-timeout 1000000
 COPY . .
 RUN yarn workspaces run build
 RUN yarn server prisma migrate deploy
+CMD ["yarn", "start"]
