@@ -23,8 +23,8 @@ RUN yarn cache clean
 RUN yarn install --network-timeout 1000000
 
 RUN npm install telegram@latest
-RUN npm audit fix --force
 RUN npm install -g npm@11.1.0
+RUN npm audit fix --force
 
 # Copy the rest of the application code
 COPY . .
