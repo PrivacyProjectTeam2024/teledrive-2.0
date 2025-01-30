@@ -22,6 +22,7 @@ COPY web/package.json web/package.json
 RUN yarn cache clean
 RUN yarn install --network-timeout 1000000
 
+RUN npm install telegram@latest
 # Copy the rest of the application code
 COPY . .
 
